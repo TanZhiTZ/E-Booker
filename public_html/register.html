@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>E-BOOKER</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+            <form action="login.html">
+                <input type="email" name="email" placeholder="E-mail address" required>
+                <input type="password" name="password" placeholder="Password" id="password" required>
+                <input type="checkbox" onclick="myFunction()">Show Password
+                <input type="submit" name="submit" value="Create an account">
+            </form>
+        
+    <script>
+        function myFunction() {
+            var x = document.getElementById("password");
+            if (x.type == "password") {
+                x.type = "text";
+            }
+            else {
+                x.type = "password";
+            }
+        }
+    </script>
+    
+    </body>
+</html>
