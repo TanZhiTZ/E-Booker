@@ -5,18 +5,46 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 -->
 <html>
     <head>
-        <title>E-BOOKER</title>
+        <title>E ★ BOOKER &bull; Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
-        <div>
+    <body style="background-image:url('img/bg-login.jpg'); display: flex; justify-content: center; align-items: center;">
+        <div style="width:75%;overflow:hidden"></div>
+        
+        <div class="frame" align="middle">
+            <img class="login-logo" src="img/E-Booker.jpg" alt="main_logo" width="235"/>
             <form action="index.html">
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <input type="submit" name="submit" value="Login Now">
-                <p>Don't Have an Account? <a href="register.html">Register Now</a></p>
+                <div class="field">
+                    <input type="email" class='textbox' name="email" placeholder="Email" required="required" autofocus>
+                </div>
+                <div class="field">
+                    <input type="password" class='textbox' name="password" placeholder="Password" required="required">
+                </div>
+                 <div class="field">
+                     <button class="buttondeco" name="login" type="submit"><b>Log In</b></button>
+                </div>
+                <div class="field">
+                     <a style="font-family:'verdana'" href="password-reset.html">Forgot password?</a>
+                </div>
+                <div style="width:90%"><hr color="#999999"></div>
+                
+                <a href="register.html" class="button_register" style="font-family:'verdana'"><b>Create an Account</b></a>
             </form>
         </div>
+        
+        <script>
+        function myFunction() {
+            var x = document.getElementById("password");
+            if (x.type == "password") {
+                x.type = "text";
+            }
+            else {
+                x.type = "password";
+            }
+        }
+    </script>
+        
     </body>
 </html>

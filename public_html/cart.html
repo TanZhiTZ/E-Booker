@@ -8,36 +8,50 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <title>E-BOOKER</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
-        <div>
-            <h1>
-                Cart
-            </h1>
+    <body style="justify-content: center; align-items: center;">
+        <!-- Header -->
+        <div class="header">
+            <div>
+                <a href="index.html"><img class="header-logo" src="img/E-Booker.jpg" alt="main_logo" width="235"/></a>
+            </div>
         </div>
+        <hr>
         
-        <ol>
-            <li>Cart</li>
-            <li>Confirm Payment</li>
-            <li>Complete!</li>
-        </ol>
-        
-        <div>
-            <header>
-                <h2>Product Name & Information</h2>
-                <div>Checkbox</div>
-            </header>
-            <section>
-                <div>Item 1 desc with pic</div>
-                <div><input type="checkbox"></div>
-            </section>
+        <!-- main -->
+        <div style=" display: flex; justify-content: center; align-items: center;">
+            <div class="cart-frame">
+                <div>
+                    <h1 style="text-align: center; margin: 5px;">
+                        Cart
+                    </h1>
+                </div>
+                <ol class="cart">
+                    <li><span class="cart">Cart</span></li>
+                    <li><span class="no-cart">Confirm Payment</span></li>
+                    <li><span class="no-cart">Complete!</span></li>
+                </ol>
+
+                <div class="product-table">
+                    <header class="product-list-header">
+                        <h2 class="product-title">Product Name & Information</h2>
+                        <div class="product-title">Selection Box</div>
+                    </header>
+                    <section class="product-list-section">
+                        <div class="product-list"><img src="img/book1.jpg" class="img-cart product-list-desc product-list"/><div class="product-list">Item Description & price</div></div>
+                        <div class="product-list-checkbox"><input type="checkbox"></div>
+                    </section>
+                </div>
+
+                <div class="btn-cart-box">
+                    <form action="payment.html">
+                        <button class="btn-cart">Payment Method ></button>
+                    </form>
+                </div>
+                <a href="index.html">Back</a>
+            </div>
         </div>
-        
-        <div>
-            <form action="payment.html" method="POST">
-                <button>To Payment Method</button>
-            </form>
-        </div>
-        
     </body>
 </html>

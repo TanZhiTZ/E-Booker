@@ -8,30 +8,38 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <title>E-BOOKER</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
-        <div>
-            <h1>
-                E-Books on your way!
-            </h1>
+<body style="justify-content: center; align-items: center;">
+        <!-- Header -->
+        <div class="header">
+            <div>
+                <a href="index.html"><img class="header-logo" src="img/E-Booker.jpg" alt="main_logo" width="235"/></a>
+            </div>
         </div>
+        <hr>
         
-        <ol>
-            <li>Cart</li>
-            <li>Confirm Payment</li>
-            <li>Complete!</li>
-        </ol>
-        
+        <!-- main -->
+        <div style=" display: flex; justify-content: center; align-items: center;">
+            <div class="cart-frame"  style="display: flex; flex-direction: column; align-items: center;">
+                <img class="header-logo" src="img/E-Booker2.jpg" alt="main_logo" width="300"/>
+                <div>
+                    <h1 style="text-align: center; margin: 5px;">
+                        Payment Complete!
+                    </h1>
+                </div>
         <form action="index.html">
             <div>
                 <div>
-                    <h1>Thank you for your purchase!</h1>
+                    <h2 style="color: #107068">Thank you for your purchase!</h2>
                 </div>
-                <div>
-                    <p>You can no read your books here (**not added)</p>
+                <hr>
+                <div style="margin-top: 20px;">
+                    <a>To your books collection! ></a>
                 </div>
-                <div>
-                    <button>say something nice to send them back to home</button>
+                <div class="btn-cart-box">
+                    <button class="btn-cart">Back to Home</button>
                 </div>
             </div>
         </form>
