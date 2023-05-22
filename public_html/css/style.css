@@ -95,11 +95,24 @@ h2 {
     color: #ff2900;
 }
 
+h3{ 
+    color: #ff2900;
+}
+
 div.header {
     display: flex;
     background-color: white;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    border-bottom: 1px solid;
+}
+
+.spacer {
+    padding-top: 105px;
 }
 
 table.header {
@@ -115,6 +128,13 @@ fieldset {
 .header-logo {
     margin-right: 20px;
     padding: 15px 0 10px 20px;
+}
+
+ img.header-logo:hover {
+    width: 250px;
+    padding: 10px 10px 10px 10px;
+    margin: 0 5px 0 0;
+    transition: .3s;
 }
 
 .login-logo {
@@ -153,7 +173,6 @@ fieldset {
 }
 
 #book {
-    width: 15%;
     display: inline-block;
     margin: 0 0 0 10px;
     padding:20px 12px 5px 12px;
@@ -161,12 +180,26 @@ fieldset {
     background-color: white;
 }
 
+.book-img {
+    border: 1px solid;
+}
+
 .book-button {
-    
+    padding-top: 12px;
+}
+
+.book-link:hover {
+    opacity: 0.8;
+    transition: .1s;
 }
 
 .btn-signup {
     margin-right: 15px;
+    transition: .2s;
+}
+
+.btn-signup:hover {
+    padding-top: 5px;
 }
 
 span {
@@ -202,6 +235,7 @@ span.no-cart {
 
 p {
     margin: 0;
+    margin-bottom: auto;
 }
 
 ul.books {
@@ -265,15 +299,16 @@ li.cart a:hover {
 
 ul.header {
     font-weight: 700;
-    display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-    grid-column-gap: 4px;
+    align-content: center;
     list-style-type: none;
     overflow: hidden;
-    background-color: black;
+    background-color: #738f99;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     flex: 1;
-    padding: 3px 3px;
+    margin-bottom: 0;
 }
 
 li.header {
@@ -286,15 +321,21 @@ li a.header {
   display: block;
   color: #352b6e;
   text-align: center;
-  padding: 16px;
+  padding: 10px 20px 10px 20px;
   text-decoration: none;
   border-radius: 4px;
 }
 
 li.header a:hover {
   border-radius: 4px;
-  background-color: #9aa0b5;
   color: white;
+}
+
+.cat-bg:hover {
+    background-image: url('img/btn1.jpg');
+    opacity: 0.7;
+    transition: 1s;
+    background-size: cover;
 }
 
 .category-btn {
@@ -307,34 +348,9 @@ li.header a:hover {
   overflow: hidden;
 }
 
-.image {
-  display: none;
-  overflow: hidden;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transition: .3s;
-  transform: translate(-50%, -47px);
-  width: 303px;
-  height: 50px;
-  background-image: url('img/book1.jpg');
-  background-size: cover;
-  border-radius: 4px;
-  z-index: 2;
-}
-
-.index {
-    position: relative;
-    z-index: 3;
-}
-
 .main {
     margin: 20px;
     flex: 1;
-}
-
-#all-books {
-    
 }
 
 .img {
@@ -372,17 +388,17 @@ p.title {
     float: left;
     background-color: white;
     text-align: center;
-    width: 15%;
+    width: auto;
     margin-right: 23px;
     padding:5px;
 }
 
 .aside {
     float: right;
-    width: 226px;
+    width: 250px;
     box-sizing: border-box;
     position: relative;
-    top: -20px;
+    padding: 0;
 }
 
 section {
@@ -506,12 +522,143 @@ hr {
     background-color: #66ba91;
   }
   
+.side-main {
+    background: white;
+  }
+  
+  .side-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0 6px 0 8px;
+    border-left: 8px solid #325c57;
+  }
+  
+.side-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0 20px 20px 20px;
+  }
+  
   .footer {
-    height: 18px;
+    height: 24px;
     padding: 4px 0;
     background-color: #107068;
     text-align: center;
     color: white;
     font-size: 12px;
   }
+  
+  .btn-frame {
+  padding: 2px;
+  outline: 0;
+  font-size: 17px;
+  color: rgb(0, 0, 0);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#fdde5c),
+    color-stop(#f8ab5e),
+    color-stop(#f56a62),
+    color-stop(#a176c8),
+    color-stop(#759beb),
+    color-stop(#65beb3),
+    to(#70db96)
+  );
+  background: linear-gradient(
+    to right,
+    #fdde5c,
+    #f8ab5e,
+    #f56a62,
+    #a176c8,
+    #759beb,
+    #65beb3,
+    #70db96
+  );
+  border-radius: 10px;
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.btn-frame > span {
+    background-color: white;
+  display: block;
+  padding: 10px 80px;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+.btn-frame > span:hover {
+    background-image: url('img/btn1.jpg');
+    background-size: cover;
+    opacity: 0.7;
+    color: white;
+    transition: .6s;
+}
+
+.marquee {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    color: #333;
+    border: 1px solid #4a4a4a;
+    background-color: #ffcccc;
+}
+
+.marquee p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: scroll-left 2s linear infinite;
+    -webkit-animation: scroll-left 2s linear infinite;
+    animation: scroll-left 20s linear infinite;
+    color: red;
+}
+
+.marquee b {
+    color: black;
+}
+
+@-moz-keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes scroll-left {
+    0% {
+        -webkit-transform: translateX(100%);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
 
