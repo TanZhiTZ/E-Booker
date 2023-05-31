@@ -8,32 +8,31 @@ function welcome() {
     alert("Welcome to E ★ Booker");
 }
 
-function login() {
-    var p = document.getElementById("password").value;
+function loginUser() {
+    var p = document.getElementById("pass").value;
     var length = p.length;
-    index = 0;
     
-     if (length <= 12) {
+     if (length <= 11) {
         alert("Password must be more than 12 characters");
-        document.getElementById("registerToIndex").action = "";
+        document.getElementById("loginToIndex").action = "";
         return;
     }
     
 }
 
-function savePass() { // even pass not match will still go to index page
+function savePass() { 
     var p = document.getElementById("password").value;
     var cp = document.getElementById("cpassword").value;
     var length = p.length;
     
     if (length <= 11) {
         alert("Password must be more than 12 characters");
-        document.getElementById("registerToIndex").action = "";
+        document.getElementById("registerToLogin").action = "";
         return;
     }
     if (p !== cp) {
         alert("Password does not match.");
-        document.getElementById("registerToIndex").action = "";
+        document.getElementById("registerToLogin").action = "";
         return;
     }
     

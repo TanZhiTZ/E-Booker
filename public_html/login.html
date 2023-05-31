@@ -18,15 +18,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         
         <div class="frame" align="middle">
             <img class="login-logo" src="img/E-Booker.jpg" alt="main_logo" width="235"/>
-            <form action="index.html">
+            <form action="index.html" id="loginToIndex">
                 <div class="field">
                     <input type="email" class='textbox' name="email" placeholder="Email" required="required" autofocus>
                 </div>
                 <div class="field">
-                    <input type="password" class='textbox' name="password" placeholder="Password" required="required">
+                    <input type="password" class='textbox' name="password" placeholder="Password" id="pass" required="required">
                 </div>
                  <div class="field">
-                     <button class="buttondeco" name="login" type="submit" onclick="login()"><b>Log In</b></button>
+                     <button class="buttondeco" name="login" type="submit" onclick="loginUser()"><b>Log In</b></button>
                 </div>
                 <div class="field">
                      <a style="font-family:'verdana'" href="password-reset.html">Forgot password?</a>
