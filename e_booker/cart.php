@@ -41,7 +41,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 <div class="product-table">
                     <header class="product-list-header">
                         <h3 class="product-title">Product Name & Information</h2>
-                        <div class="product-title">Selection Box</div>
+                        <div class="product-title">delete</div>
                     </header>
                     <section class="product-list-section">
                         <?php 
@@ -55,15 +55,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                                 <div class='product-list'><img src='img/books/$records->book_img_name' class='img-cart product-list-desc product-list'>
                                     <div class='product-list'>Title: $records->book_title</div>
                                     Price: RM $records->book_price
-                                    <div style='float: right; margin-top: 90px;'>
+                                    <div>
                                     <form action='http://localhost/e_booker/api/product/delete.php' method='POST'>
                                         <input type='hidden' value='$user_id' name='user_id'>
                                         <input type='hidden' value='$records->book_id' name='book_id'>
-                                    <button type='submit'>delete</button>
+                                    
                                     </form>
                                     </div>
                                     </div>
-                                <div class='product-list-checkbox'><input type='checkbox'></div>";
+                                <div class='product-list-checkbox'><div style='float: right; margin-top: 90px;'><button type='submit'>delete</button></div></div>";
                                 $tprice += $records->book_price;
                             }
                             $_SESSION['price'] = $tprice;
