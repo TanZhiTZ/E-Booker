@@ -109,7 +109,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                                                         <input type='hidden' value='$records->price' name='price'>
                                                                 ";
 
-                                                            /$json = file_get_contents("http://localhost/e_booker/api/product/read_library.php?id=$user_id");
+                                                            $json = file_get_contents("http://localhost/e_booker/api/product/read_library.php?id=$user_id");
                                                             $dataLib = json_decode($json);
                                                             $json = file_get_contents("http://localhost/e_booker/api/product/read_cart.php?id=$user_id");
                                                             $dataCart = json_decode($json);
