@@ -60,10 +60,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                                         <input type='hidden' value='$user_id' name='user_id'>
                                         <input type='hidden' value='$records->book_id' name='book_id'>
                                     
-                                    </form>
+                                    
                                     </div>
                                     </div>
-                                <div class='product-list-checkbox'><div style='float: right; margin-top: 90px;'><button type='submit'>delete</button></div></div>";
+                                <div class='product-list-checkbox'><div style='float: right; margin-top: 90px;'><button type='submit'>delete</button></div></div></form>";
                                 $tprice += $records->book_price;
                             }
                             $_SESSION['price'] = $tprice;
